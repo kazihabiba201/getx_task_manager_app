@@ -32,9 +32,10 @@ class _InProgressTaskScreenState extends State<InProgressTaskScreen> {
           Get.snackbar(
             'Failed',
             'In progress task data get failed!',
-            backgroundColor: Colors.red,
+            backgroundColor: Colors.redAccent,
             colorText: Colors.white,
-            borderRadius: 10,
+            snackPosition: SnackPosition.BOTTOM,
+            borderRadius: 8,
           );
         }
       });

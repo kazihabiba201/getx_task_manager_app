@@ -36,6 +36,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
     _firstNameTEController.text = userData.firstName ?? '';
     _lastNameTEController.text = userData.lastName ?? '';
     _mobileTEController.text = userData.mobile ?? '';
+    _passwordTEController.text = userData.password ?? '';
   }
 
   @override
@@ -173,7 +174,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                             hintText: 'Password',
                           ),
                           validator: (String? value) {
-                            if (value!.isNotEmpty && value.length >= 5) {
+                            if (value!.isNotEmpty && value.length <= 6) {
                               return 'Enter a password more than 6 letters';
                             }
                             return null;
@@ -211,7 +212,8 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                                             'Profile updated!',
                                             backgroundColor: Colors.green,
                                             colorText: Colors.white,
-                                            borderRadius: 10,
+                                            snackPosition: SnackPosition.BOTTOM,
+                                            borderRadius: 8,
                                           );
                                         } else {
                                           Get.snackbar(
@@ -219,7 +221,8 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                                             'Profile update failed! Try again.',
                                             backgroundColor: Colors.red,
                                             colorText: Colors.white,
-                                            borderRadius: 10,
+                                            snackPosition: SnackPosition.BOTTOM,
+                                            borderRadius: 8,
                                           );
                                         }
                                       });

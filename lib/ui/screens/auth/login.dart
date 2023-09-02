@@ -95,22 +95,24 @@ class LoginScreen extends StatelessWidget {
                                         'Login Success',
                                         'User login successful!',
                                         backgroundColor: Colors.green,
+                                        snackPosition: SnackPosition.BOTTOM,
                                         colorText: Colors.white,
-                                        borderRadius: 10,
+                                        borderRadius: 8,
                                       );
                                       Get.offAll(() => BottomNavBaseScreen());
                                     } else {
                                       Get.snackbar(
                                         'Login Failed',
                                         'Incorrect email or password',
-                                        backgroundColor: Colors.red,
+                                        backgroundColor: Colors.redAccent,
+                                        snackPosition: SnackPosition.BOTTOM,
                                         colorText: Colors.white,
-                                        borderRadius: 10,
+                                        borderRadius: 8,
                                       );
                                     }
                                   });
                                 },
-                                child: const Icon(Icons.arrow_forward_ios)),
+                                child: const Icon(Icons.arrow_circle_right_outlined)),
                           ),
                         );
                       }),

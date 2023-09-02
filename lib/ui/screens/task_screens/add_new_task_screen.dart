@@ -101,7 +101,8 @@ class AddNewTaskScreen extends StatelessWidget {
                                             'Task added successfully!',
                                             backgroundColor: Colors.green,
                                             colorText: Colors.white,
-                                            borderRadius: 10,
+                                            snackPosition: SnackPosition.BOTTOM,
+                                            borderRadius: 8,
                                           );
                                         } else {
                                           Get.snackbar(
@@ -109,12 +110,13 @@ class AddNewTaskScreen extends StatelessWidget {
                                             'Task add failed!',
                                             backgroundColor: Colors.red,
                                             colorText: Colors.white,
-                                            borderRadius: 10,
+                                            snackPosition: SnackPosition.BOTTOM,
+                                            borderRadius: 8,
                                           );
                                         }
                                       });
                                     },
-                                    child: const Icon(Icons.arrow_forward_ios)),
+                                    child: const Icon(Icons.arrow_circle_right_outlined)),
                               ),
                             );
                           }),

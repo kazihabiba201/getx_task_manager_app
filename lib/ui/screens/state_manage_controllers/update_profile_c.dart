@@ -23,9 +23,10 @@ class UpdateProfileController extends GetxController {
       "firstName": firstName,
       "lastName": lastName,
       "mobile": mobile,
-      "photo": ""
+      "photo": "",
+      "password":password,
     };
-    if (password.isNotEmpty && password.length >= 5) {
+    if (password.isNotEmpty && password.length <= 6) {
       requestBody['password'] = password;
     }
 
@@ -38,6 +39,7 @@ class UpdateProfileController extends GetxController {
       userData.firstName = firstName;
       userData.lastName = lastName;
       userData.mobile = mobile;
+      userData.password = password;
       AuthUtility.updateUserInfo(userData);
       return true;
     } else {

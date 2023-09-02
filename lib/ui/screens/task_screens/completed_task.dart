@@ -140,7 +140,8 @@ class _CompletedTaskScreenState extends State<CompletedTaskScreen> {
                     'Task deletion successful!',
                     backgroundColor: Colors.green,
                     colorText: Colors.white,
-                    borderRadius: 10,
+                    snackPosition: SnackPosition.BOTTOM,
+                    borderRadius: 8,
                   );
                 } else {
                   Get.snackbar(
@@ -148,7 +149,8 @@ class _CompletedTaskScreenState extends State<CompletedTaskScreen> {
                     'Task deletion failed!',
                     backgroundColor: Colors.red,
                     colorText: Colors.white,
-                    borderRadius: 10,
+                    snackPosition: SnackPosition.BOTTOM,
+                    borderRadius: 8,
                   );
                 }
               });

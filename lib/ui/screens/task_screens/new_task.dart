@@ -123,9 +123,10 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                         Get.snackbar(
                           'Failed',
                           'Summary data get failed!',
-                          backgroundColor: Colors.red,
+                          backgroundColor: Colors.redAccent,
                           colorText: Colors.white,
-                          borderRadius: 10,
+                          snackPosition: SnackPosition.BOTTOM,
+                          borderRadius: 8,
                         );
                       }
                     });
@@ -134,9 +135,10 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                         Get.snackbar(
                           'Failed',
                           'New task data get failed!',
-                          backgroundColor: Colors.red,
+                          backgroundColor: Colors.redAccent,
                           colorText: Colors.white,
-                          borderRadius: 10,
+                          snackPosition: SnackPosition.BOTTOM,
+                          borderRadius: 8,
                         );
                       }
                     });
@@ -227,15 +229,17 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                     'Task deletion successful!',
                     backgroundColor: Colors.green,
                     colorText: Colors.white,
-                    borderRadius: 10,
+                    snackPosition: SnackPosition.BOTTOM,
+                    borderRadius: 8,
                   );
                 } else {
                   Get.snackbar(
                     'Failed',
                     'Task deletion failed!',
-                    backgroundColor: Colors.red,
+                    backgroundColor: Colors.redAccent,
                     colorText: Colors.white,
-                    borderRadius: 10,
+                    snackPosition: SnackPosition.BOTTOM,
+                    borderRadius: 8,
                   );
                 }
               });

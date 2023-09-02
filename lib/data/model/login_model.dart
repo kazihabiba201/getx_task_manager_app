@@ -29,8 +29,10 @@ class UserData {
   String? mobile;
   String? photo;
 
+  String? password;
+
   UserData(
-      {this.email, this.firstName, this.lastName, this.mobile, this.photo});
+      {this.email, this.firstName, this.lastName, this.mobile, this.photo, this.password});
 
   UserData.fromJson(Map<String, dynamic> json) {
     email = json['email'];
@@ -38,6 +40,7 @@ class UserData {
     lastName = json['lastName'];
     mobile = json['mobile'];
     photo = json['photo'];
+   password = json['password'];
   }
 
   Map<String, dynamic> toJson() {
@@ -47,6 +50,7 @@ class UserData {
     data['lastName'] = lastName;
     data['mobile'] = mobile;
     data['photo'] = photo;
+    data['password']=password;
     return data;
   }
 }

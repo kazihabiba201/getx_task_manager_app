@@ -95,9 +95,10 @@ class OtpVerificationScreen extends StatelessWidget {
                                   Get.snackbar(
                                     'Warning',
                                     'Otp must be 6 digit!',
-                                    backgroundColor: Colors.red,
+                                    backgroundColor: Colors.redAccent,
+                                    snackPosition: SnackPosition.BOTTOM,
                                     colorText: Colors.white,
-                                    borderRadius: 10,
+                                    borderRadius: 8,
                                   );
                                 } else {
                                   otpController
@@ -109,7 +110,8 @@ class OtpVerificationScreen extends StatelessWidget {
                                         'Otp verification success!',
                                         backgroundColor: Colors.green,
                                         colorText: Colors.white,
-                                        borderRadius: 10,
+                                        snackPosition: SnackPosition.BOTTOM,
+                                        borderRadius: 8,
                                       );
                                       Get.to(() => ResetPasswordScreen(
                                         email: email,
@@ -121,7 +123,8 @@ class OtpVerificationScreen extends StatelessWidget {
                                         'Otp verification has been failed!',
                                         backgroundColor: Colors.red,
                                         colorText: Colors.white,
-                                        borderRadius: 10,
+                                        snackPosition: SnackPosition.BOTTOM,
+                                        borderRadius: 8,
                                       );
                                     }
                                   });

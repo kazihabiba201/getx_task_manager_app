@@ -87,6 +87,7 @@ class EmailVerificationScreen extends StatelessWidget {
                                       'Email verification successful!',
                                       backgroundColor: Colors.green,
                                       colorText: Colors.white,
+                                      snackPosition: SnackPosition.BOTTOM,
                                       borderRadius: 10,
                                     );
                                     Get.to(() => OtpVerificationScreen(
@@ -96,8 +97,9 @@ class EmailVerificationScreen extends StatelessWidget {
                                     Get.snackbar(
                                       'Failed',
                                       'Email verification has been failed!',
-                                      backgroundColor: Colors.red,
+                                      backgroundColor: Colors.redAccent,
                                       colorText: Colors.white,
+                                      snackPosition: SnackPosition.BOTTOM,
                                       borderRadius: 10,
                                     );
                                   }

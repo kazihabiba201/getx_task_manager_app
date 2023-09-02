@@ -76,7 +76,7 @@ class ResetPasswordScreen extends StatelessWidget {
                         if (value?.isEmpty ?? true) {
                           return 'Enter your confirm password';
                         } else if (value! != _passwordTEController.text) {
-                          return 'Confirm password does n\'t match';
+                          return 'Confirm password does not match';
                         }
                         return null;
                       },
@@ -108,7 +108,8 @@ class ResetPasswordScreen extends StatelessWidget {
                                         'Password reset successful!',
                                         backgroundColor: Colors.green,
                                         colorText: Colors.white,
-                                        borderRadius: 10,
+                                        snackPosition: SnackPosition.BOTTOM,
+                                        borderRadius: 8,
                                       );
                                       Get.offAll(() => LoginScreen());
                                     }
@@ -119,7 +120,8 @@ class ResetPasswordScreen extends StatelessWidget {
                                         'Reset password has been failed!',
                                         backgroundColor: Colors.red,
                                         colorText: Colors.white,
-                                        borderRadius: 10,
+                                        snackPosition: SnackPosition.BOTTOM,
+                                        borderRadius: 8,
                                       );
                                     }
                                   });

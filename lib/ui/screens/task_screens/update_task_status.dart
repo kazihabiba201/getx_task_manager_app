@@ -48,7 +48,9 @@ class _UpdateTaskStatusSheetState extends State<UpdateTaskStatusSheet> {
                             _selectedTask = taskStatusList[index];
                             updateTaskStatusController.getUpdateState();
                           },
-                          title: Text(taskStatusList[index].toUpperCase()),
+                          title: Text(taskStatusList[index].toUpperCase(), style: TextStyle(
+                            color: isSelected ? Colors.white : Colors.black, // Change color here
+                          ),),
                           trailing: isSelected
                               ? const Icon(Icons.check, color: Colors.white)
                               : null,
@@ -77,7 +79,8 @@ class _UpdateTaskStatusSheetState extends State<UpdateTaskStatusSheet> {
                                     'Update task status successful!',
                                     backgroundColor: Colors.green,
                                     colorText: Colors.white,
-                                    borderRadius: 10,
+                                    snackPosition: SnackPosition.BOTTOM,
+                                    borderRadius: 8,
                                   );
                                 } else {
                                   Get.snackbar(
@@ -85,7 +88,8 @@ class _UpdateTaskStatusSheetState extends State<UpdateTaskStatusSheet> {
                                     'Update task status has been failed!',
                                     backgroundColor: Colors.red,
                                     colorText: Colors.white,
-                                    borderRadius: 10,
+                                    snackPosition: SnackPosition.BOTTOM,
+                                    borderRadius: 8,
                                   );
                                 }
                               });
