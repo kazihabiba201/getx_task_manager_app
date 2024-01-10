@@ -1,5 +1,8 @@
 # getx_task_manage_app
 
+![task](https://github.com/kazihabiba201/craftybay/assets/72264916/9d8eada2-adaf-402d-b15f-be936e941be8)
+
+### Screen
 <img src= "https://github.com/kazihabiba201/getx_task_manager_app/assets/72264916/14b55c08-04e6-41a2-a593-b16a74844c66" height="500"/>
 <img src= "https://github.com/kazihabiba201/getx_task_manager_app/assets/72264916/c85e8e8c-228f-4f5b-8779-117eb1ee309a" height="500"/>
 <img src= "https://github.com/kazihabiba201/getx_task_manager_app/assets/72264916/0269b10a-8716-486b-b720-d84f3d408f73" height="500"/>
